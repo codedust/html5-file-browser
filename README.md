@@ -3,6 +3,8 @@ HTML5 file browser
 
 This HTML5 file browser allows to browse and share files in a public server directory. Unlike some other solutions out there, this file browser does not depend on any server-side code. Instead, directory listings are used to parse the list of available files.
 
+![A screenshot showing the file preview](files/screenshot.png)
+
 ### Configuration
 #### Apache
 This program comes with a `.htaccess` file that enables directory listings for the `files/` directory. Simply upload this file browser to any directory on your server and you are done.
