@@ -37,7 +37,6 @@ var app = function(){
   function cd(dir) {
     current_dir = dir;
 
-    console.log(current_dir, base_dir);
     location.hash = current_dir.replace(base_dir, '');
 
     // show the location bar
@@ -91,12 +90,16 @@ var app = function(){
   // show an image preview of the given file
   function showPreview(filepath){
     $(".bg-translucent").css('display', 'block');
+    $(".file-view-img").css('padding-top', '2em');
     $(".file-view-img").attr('src', 'loader.gif');
     $(".file-view-wrapper").css('display', 'block');
     var img = new Image();
     img.src = filepath;
     img.onload = function() {
+      $(".file-view-img").fadeOut(0);
+      $(".file-view-img").css('padding-top', '0');
       $(".file-view-img").attr('src', filepath);
+      $(".file-view-img").fadeIn();
       var scale_width = 0.8 * $(document).width() / img.width;
       var scale_height = 0.8 * $(document).height() / img.height;
       var imgWidth = img.width * Math.min(scale_width, scale_height);
