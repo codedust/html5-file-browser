@@ -97,8 +97,10 @@ var app = function(){
     img.src = filepath;
     img.onload = function() {
       $(".file-view-img").attr('src', filepath);
-      var imgWidth = $('.file-view-img').width();
-      $(".file-view-wrapper").css('left', ($(document).width()-imgWidth)/2);
+      var scale_width = 0.8 * $(document).width() / img.width;
+      var scale_height = 0.8 * $(document).height() / img.height;
+      var imgWidth = img.width * Math.min(scale_width, scale_height);
+      $(".file-view-wrapper").css('left', ($(document).width() - imgWidth) / 2);
       $(".file-view-wrapper").css('width', imgWidth);
       $(".file-view-prev").css('display', 'block');
       $(".file-view-next").css('display', 'block');
