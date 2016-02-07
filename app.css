@@ -1,0 +1,88 @@
+body {
+  background: #22222f;
+  padding-top: 1em;
+  color: #eee;
+}
+
+a, a:hover {
+  cursor: pointer;
+  color: #eee;
+}
+
+.base-dir-icon {
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: .125em;
+}
+
+.browser-view {
+  margin-top: 3em;
+}
+
+.browser-view a {
+  cursor: pointer;
+  background-color: #333344;
+  color: white;
+  padding: 1.5em 3em 1.5em 1.5em;
+  margin: .5em;
+  min-width: 15em;
+  display: inline-block;
+  border-radius: .25em;
+}
+
+.browser-view a span {
+  margin-right: .66em;
+}
+
+.browser-view a:hover {
+  text-decoration: none;
+  transition: background-color .25s;
+  background: #434354;
+}
+
+.bg-translucent {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);;
+  cursor: pointer;
+}
+
+.file-view-wrapper {
+  display: none;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
+  text-align: center;
+}
+
+.file-view-img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 0 3em black;
+}
+
+.file-view-prev, .file-view-next {
+  display: none;
+  position: absolute;
+  top: 43%;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.file-view-prev {
+  left: .75em;
+}
+
+.file-view-next {
+  right: .75em;
+}
+
+.file-view-prev:hover, .file-view-next:hover {
+  opacity: 1;
+}
