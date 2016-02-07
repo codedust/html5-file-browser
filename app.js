@@ -100,11 +100,13 @@ var app = function(){
       $(".file-view-img").css('padding-top', '0');
       $(".file-view-img").attr('src', filepath);
       $(".file-view-img").fadeIn();
-      var scale_width = 0.8 * $(document).width() / img.width;
-      var scale_height = 0.8 * $(document).height() / img.height;
+      var scale_width = 0.8 * $(window).width() / img.width;
+      var scale_height = 0.8 * $(window).height() / img.height;
       var imgWidth = img.width * Math.min(scale_width, scale_height);
+      var imgHeight = img.height * Math.min(scale_width, scale_height);
       $(".file-view-wrapper").css('left', ($(document).width() - imgWidth) / 2);
       $(".file-view-wrapper").css('width', imgWidth);
+      $(".file-view-wrapper").css('height', imgHeight);
       $(".file-view-prev").css('display', 'block');
       $(".file-view-next").css('display', 'block');
     };
