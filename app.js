@@ -62,9 +62,9 @@ var app = function(){
 
       // create tiles
       $(html).find("a").each(function(i, element){
-        if (isValidTile(element.href)) {
+        if (isValidTile(element.getAttribute('href'))) {
           $(".browser-view").append(
-            createTile(current_dir, element.href));
+            createTile(current_dir, element.getAttribute('href')));
         }
       });
 
