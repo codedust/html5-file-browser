@@ -13,7 +13,18 @@ var app = function(){
 
   // create a tile
   function createTile(href, name) {
-    return '<a href="'+href+name+'"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>'+name+'</a>';
+    var glyphicon = document.createElement('span');
+    glyphicon.cassName = "glyphicon glyphicon-file";
+    glyphicon.setAttribute('aria-hidden', 'true');
+
+    var title = document.createElement('span');
+    title.innerText = decodeURIComponent(name);
+
+    var a = document.createElement('a');
+    a.href = href+name;
+    a.appendChild(glyphicon);
+    a.appendChild(title);
+    return a;
   }
 
   // cache an image for future usage
