@@ -46,7 +46,7 @@ var app = function(){
 
   // load the contents of the given directory
   function cd(dir) {
-    current_dir = dir;
+    current_dir = decodeURIComponent(dir);
 
     location.hash = current_dir.replace(base_dir, '');
 
